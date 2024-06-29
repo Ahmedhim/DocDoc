@@ -1,3 +1,5 @@
+import 'package:docdoc_project/core/helper/extension.dart';
+import 'package:docdoc_project/core/routing/routes.dart';
 import 'package:docdoc_project/core/theming/colors.dart';
 import 'package:docdoc_project/core/theming/styles.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,7 @@ class GetStartedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return  TextButton(
       onPressed: () {
-        
+        context.pushNamedAndRemoveUntil(Routes.loginScreen, predicate: (Route<dynamic> route) => false);
       }, 
       style:  ButtonStyle(
          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
