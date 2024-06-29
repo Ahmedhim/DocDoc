@@ -2,8 +2,8 @@
 
 import 'package:docdoc_project/core/routing/routes.dart';
 import 'package:docdoc_project/features/home/view/home.dart';
-import 'package:docdoc_project/features/login/view/login.dart';
-import 'package:docdoc_project/features/onboarding/view/onboading.dart';
+import 'package:docdoc_project/features/login/ui/view/login.dart';
+import 'package:docdoc_project/features/onboarding/ui/view/onboading.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
