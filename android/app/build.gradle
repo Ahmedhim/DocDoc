@@ -18,6 +18,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8
     }
+   
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
@@ -29,6 +30,20 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
+     flavorDimensions "default"
+
+productFlavors {
+    production {
+        dimension "default"
+        resValue "string", "app_name", "DocDoc production "  
+    }
+
+    development {
+        dimension "default"
+        applicationIdSuffix ".dev"
+        resValue "string", "app_name", "DocDoc development"
+    }
+}
 
     buildTypes {
         release {
