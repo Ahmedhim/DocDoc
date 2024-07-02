@@ -25,7 +25,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   @override
   void initState() {
     passwordController =
-        BlocProvider.of<LoginCubit>(context).passwordController;
+       context.read<LoginCubit>().passwordController;
     super.initState();
     setupPasswordValidation();
   }
@@ -88,5 +88,10 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
         verticalSpace(20),
       ]),
     );
+  }
+  @override
+  dispose() {
+    passwordController.dispose();
+    super.dispose();
   }
 }
