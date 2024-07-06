@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  
  await setupGetit();
   await ScreenUtil.ensureScreenSize();
   runApp(const DocDocApp());
